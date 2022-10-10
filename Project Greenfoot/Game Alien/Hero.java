@@ -23,6 +23,7 @@ public class Hero extends Actor
             setLocation(0,getY());
         }
         moveHero();
+        //fireBullet();
     }
     public void moveHero()
     {
@@ -44,4 +45,11 @@ public class Hero extends Actor
         }
 
     }
+    /*public void fireBullet()
+    {
+        if (Greenfoot.isKeyDown("space"))
+        {
+            getWorld().addObject(new Fire(), getX()+50,getY());
+        }
+    }*/
 }

@@ -19,6 +19,20 @@ public class MyWorld extends World
         super(600, 400, 1); 
         prepare();
     }
+    int enemyCount = 0;
+    public void act()
+    {
+        enemyCount = (enemyCount+1)%300; // berulang setiap 5 detik
+        if(enemyCount == 0) // akan berulang setiap reset
+        {
+            addEnemy(); // tambah enemy baru
+        }
+    }
+    public void addEnemy()
+    {
+        //menambah enemy baru di  x = 600, dan y = random dengan batas 400
+        addObject(new Enemy(),600,Greenfoot.getRandomNumber(400)); 
+    }
     
     /**
      * Prepare the world for the start of the program.
@@ -28,10 +42,5 @@ public class MyWorld extends World
     {
         Hero hero = new Hero();
         addObject(hero,100,200);
-
-        //Hero hero2 = new Hero();
-        //addObject(hero2,250,200);
-        Enemy enemy = new Enemy();
-        addObject(enemy,359,189);
     }
 }
