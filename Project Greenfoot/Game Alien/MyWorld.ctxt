@@ -11,4 +11,6 @@ comment3.target=void\ addEnemy()
 comment4.params=
 comment4.target=void\ prepare()
 comment4.text=\r\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\r\n\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\r\n
-numComments=5
+comment5.params=
+comment5.target=void\ spawnEnemy()
+numComments=6

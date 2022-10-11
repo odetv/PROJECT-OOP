@@ -15,15 +15,13 @@ public class Hero extends Actor
     
     public void act()
     {
-        // Add your action code here.
-        
-        //move(2);
-        //if (getX()==599){
-        if (isAtEdge()){
+        /*if (isAtEdge()){
             setLocation(0,getY());
-        }
+        }*/
         moveHero();
-        //fireBullet();
+        shootLaser();
+        detectEnemyCollision();
+        //enemyCollision();
     }
     public void moveHero()
     {
@@ -45,11 +43,37 @@ public class Hero extends Actor
         }
 
     }
-    /*public void fireBullet()
+    int laserTimer = 0;
+    public void shootLaser(){
+        if (laserTimer == 30){
+            getWorld().addObject(
+                new Laser(),
+                getX() + 5,
+                getY()
+            );
+            laserTimer = 0;
+        }else{
+            laserTimer++;
+        }
+    }
+    public void detectEnemyCollision()
     {
-        if (Greenfoot.isKeyDown("space"))
+        //kode robot akan kembali ke awal jika bertabrakan dengan sebuah instance dari sebuah Block
+        if (isTouching(Enemy.class))
         {
-            getWorld().addObject(new Fire(), getX()+50,getY());
+            setLocation(100,200);
+        }
+    }
+    /*public void enemyCollision(){
+        if (isTouching(Enemy.class)){
+            getWorld().addObject(
+                new Boom(),
+                getX(),
+                getY()
+                );
+            
+            removeTouching(Enemy.class);
+            getWorld().removeObject(this);
         }
     }*/
 }

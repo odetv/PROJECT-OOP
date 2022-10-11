@@ -22,11 +22,12 @@ public class MyWorld extends World
     int enemyCount = 0;
     public void act()
     {
-        enemyCount = (enemyCount+1)%300; // berulang setiap 5 detik
+        /*enemyCount = (enemyCount+1)%300; // berulang setiap 5 detik
         if(enemyCount == 0) // akan berulang setiap reset
         {
             addEnemy(); // tambah enemy baru
-        }
+        }*/
+        spawnEnemy();
     }
     public void addEnemy()
     {
@@ -42,5 +43,21 @@ public class MyWorld extends World
     {
         Hero hero = new Hero();
         addObject(hero,100,200);
+    }
+    
+    public int timerEnemy = 0;
+    public void spawnEnemy(){
+        if (timerEnemy==180){
+            //int speed = Greenfoot.getRandomNumber(4) + 1;
+            addObject(
+                new Enemy(
+                    Greenfoot.getRandomNumber(4) + 1
+                ),
+                599,
+                Greenfoot.getRandomNumber(400));
+            timerEnemy = 0;
+        } else{
+            timerEnemy++;
+        }
     }
 }
