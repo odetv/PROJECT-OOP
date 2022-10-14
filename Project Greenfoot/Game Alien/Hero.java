@@ -15,13 +15,9 @@ public class Hero extends Actor
     
     public void act()
     {
-        /*if (isAtEdge()){
-            setLocation(0,getY());
-        }*/
         moveHero();
         shootLaser();
         detectEnemyCollision();
-        //enemyCollision();
     }
     public void moveHero()
     {
@@ -58,22 +54,19 @@ public class Hero extends Actor
     }
     public void detectEnemyCollision()
     {
-        //kode robot akan kembali ke awal jika bertabrakan dengan sebuah instance dari sebuah Block
         if (isTouching(Enemy.class))
         {
+            enemyCollision();
             setLocation(100,200);
         }
     }
-    /*public void enemyCollision(){
+    public void enemyCollision(){
         if (isTouching(Enemy.class)){
             getWorld().addObject(
                 new Boom(),
                 getX(),
                 getY()
                 );
-            
-            removeTouching(Enemy.class);
-            getWorld().removeObject(this);
         }
-    }*/
+    }
 }
