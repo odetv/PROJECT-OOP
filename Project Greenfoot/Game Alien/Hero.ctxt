@@ -10,4 +10,6 @@ comment3.params=
 comment3.target=void\ shootLaser()
 comment4.params=
 comment4.target=void\ detectEnemyCollision()
-numComments=5
+comment5.params=
+comment5.target=void\ enemyCollision()
+numComments=6
