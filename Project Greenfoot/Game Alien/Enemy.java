@@ -28,9 +28,9 @@ public class Enemy extends Actor
         if(isAtEdge()){
             getWorld().removeObject(this); 
         }
-        shootAttackEnemy();
+        //shootAttackEnemy();
     }
-    int attackTimerEnemy = 0;
+    /*int attackTimerEnemy = 0;
     public void shootAttackEnemy(){
         if (attackTimerEnemy == 30){
             getWorld().addObject(
@@ -42,5 +42,5 @@ public class Enemy extends Actor
         }else{
             attackTimerEnemy++;
         }
-    }
+    }*/
 }

@@ -36,11 +36,19 @@ dependency8.type=UsesDependency
 dependency9.from=Robot
 dependency9.to=Home
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=737
 editor.fx.0.width=814
 editor.fx.0.x=360
 editor.fx.0.y=26
 height=830
+=======
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=552
+editor.fx.0.y=104
+height=1066
+>>>>>>> ce9785c70323d850693ee08299d305a3e4f5fbc1
 package.numDependencies=10
 package.numTargets=8
 project.charset=UTF-8

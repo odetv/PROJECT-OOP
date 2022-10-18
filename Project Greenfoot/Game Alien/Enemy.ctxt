@@ -8,6 +8,4 @@ comment2.params=
 comment2.target=Enemy()
 comment3.params=
 comment3.target=void\ act()
-comment4.params=
-comment4.target=void\ shootAttackEnemy()
-numComments=5
+numComments=4
