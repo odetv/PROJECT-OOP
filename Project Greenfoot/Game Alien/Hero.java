@@ -8,18 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Hero extends Actor
 {
-    /**
-     * Act - do whatever the Hero wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    
     public void act()
     {
         moveHero();
         shootLaser();
         detectEnemyCollision();
     }
-    public void moveHero()
+    
+    private void moveHero()
     {
         if (Greenfoot.isKeyDown("up"))
         {
@@ -37,10 +33,10 @@ public class Hero extends Actor
         {
             setLocation(getX()+2,getY());
         }
-
     }
-    int laserTimer = 0;
-    public void shootLaser(){
+    
+    private int laserTimer = 0;
+    private void shootLaser(){
         if (laserTimer == 30){
             getWorld().addObject(
                 new Laser(),
@@ -52,7 +48,8 @@ public class Hero extends Actor
             laserTimer++;
         }
     }
-    public void detectEnemyCollision()
+    
+    private void detectEnemyCollision()
     {
         if (isTouching(Enemy.class))
         {
@@ -60,7 +57,8 @@ public class Hero extends Actor
             setLocation(100,200);
         }
     }
-    public void enemyCollision(){
+    
+    private void enemyCollision(){
         if (isTouching(Enemy.class)){
             getWorld().addObject(
                 new Boom(),
