@@ -8,9 +8,9 @@ public class Main {
 	public static void main(String[] args) {
 		Mahasiswa mhs1 = new Mahasiswa(
 				"I Gede Gelgel Abdiutama",
-				"2115101014",
 				"Sukasada",
 				true,
+				"2115101014",
 				"Ilmu Komputer",
 				"Teknik Informatika",
 				"FTK"
@@ -19,9 +19,9 @@ public class Main {
 		
 		Dosen dosen1 = new Dosen(
 				"A.A. Gede Yudhi Paramartha, S.Kom., M.Kom.",
-				"198806222015041003",
-				true,
 				"Singaraja",
+				true,
+				"198806222015041003",
 				"Ilmu Komputer",
 				"Teknik Informatika",
 				"FTK",
@@ -31,12 +31,11 @@ public class Main {
 		
 		Pegawai pegawai1 = new Pegawai(
 				"Pegawai",
-				"127891192017040221",
-				false,
 				"Buleleng",
+				false,
+				"127891192017040221",
 				"Laboratorium FTK"
 				);
 		pegawai1.printAllInfo();
 	}
-
 }
