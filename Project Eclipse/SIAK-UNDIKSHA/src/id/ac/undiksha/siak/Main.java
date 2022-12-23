@@ -6,26 +6,30 @@ import id.ac.undiksha.siak.entities.Pegawai;
 public class Main {
 
 	public static void main(String[] args) {
-		Mahasiswa mhs1 = new Mahasiswa(
+		Mahasiswa mhs2 = new Mahasiswa(
 				"I Gede Gelgel Abdiutama",
 				"Sukasada",
 				true,
 				"2115101014",
+				"ILKOM",
 				"Ilmu Komputer",
+				"TI",
 				"Teknik Informatika",
 				"FTK"
 				);
-		mhs1.printAllInfo();
+		mhs2.printAllInfo();
 		
 		Dosen dosen1 = new Dosen(
 				"A.A. Gede Yudhi Paramartha, S.Kom., M.Kom.",
 				"Singaraja",
 				true,
 				"198806222015041003",
+				"ILKOM",
 				"Ilmu Komputer",
+				"Koorprodi",
+				"TI",
 				"Teknik Informatika",
-				"FTK",
-				"Koorprodi Ilmu Komputer"
+				"FTK"
 				);
 		dosen1.printAllInfo();
 		
