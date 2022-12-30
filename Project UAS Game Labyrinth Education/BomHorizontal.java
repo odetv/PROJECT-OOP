@@ -2,16 +2,15 @@ import lang.stride.*;
 import java.util.*;
 import greenfoot.*;
 
-public class BomHorizontal extends Actor
+public class BomHorizontal extends Bom
 {
-    private int speed;
-    public BomHorizontal(int inc){
-        speed = inc;
+    public BomHorizontal(int speed)
+    {
+        super(speed);
     }
+    
     public void act(){
+        super.WallDetect();
         setLocation(getX()-speed, getY());
-        if(isTouching(WallHorizontal.class)){
-            speed = -speed;
-        }
     }
 }

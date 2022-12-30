@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=BomVertikal
-comment1.params=inc
+comment1.params=speed
 comment1.target=BomVertikal(int)
 comment2.params=
 comment2.target=void\ act()

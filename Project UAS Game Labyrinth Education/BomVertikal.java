@@ -2,16 +2,15 @@ import lang.stride.*;
 import java.util.*;
 import greenfoot.*;
 
-public class BomVertikal extends Actor
+public class BomVertikal extends Bom
 {
-    private int speed;
-    public BomVertikal(int inc){
-        speed = inc;
+    public BomVertikal(int speed)
+    {
+        super(speed);
     }
+    
     public void act(){
+        super.WallDetect();
         setLocation(getX(), getY()-speed);
-        if(isTouching(WallVertikal.class)){
-            speed = -speed;
-        }
     }
 }
