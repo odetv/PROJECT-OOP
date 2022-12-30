@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Hero
+comment1.params=
+comment1.target=void\ act()
+comment2.params=speed
+comment2.target=void\ control(int)
+comment3.params=
+comment3.target=boolean\ hitWall()
+comment4.params=
+comment4.target=void\ hitAddSpeed()
+comment5.params=
+comment5.target=void\ hitCheckPoint()
+comment6.params=
+comment6.target=void\ hitBom()
+comment7.params=
+comment7.target=void\ quizDetection()
+numComments=8
